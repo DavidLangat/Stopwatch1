@@ -22,14 +22,14 @@
     </div>
 
     <script>
-      const timer = document.getElementById("Stopwatch"); //we gave a const value to timer so that it can be used in the conditional statment .okay
+      const timer = document.getElementById("Stopwatch"); //we gave a const value to timer so that it can be used in the conditional statment.
 
       var hr = 0; // line 27 to 30 to declare a variable yeah
       var ms = 0;
       var s = 0;
-      var stime = true; // this boolean will be used to start or stop the stopwatch ooh okay .
+      var stime = true; // this boolean will be used to start or stop the stopwatch 
       function start() {
-        // when the var stime is true it means that the stopwatch is not running thats why we have to change its boolean value to false owh i thought true means its running . when you run the web. the default value of stimer is true and the timer at that point is no runnong until the start button is pressed ooh i get it now . yeah the boolean value is just user defined ooh . stimer meant stopotiime thats why i used true okay i have understood that e can we procceed  yesyto the partnext line yes
+        // when the var stime is true it means that the stopwatch is not running thats why we have to change its boolean value to false . when you run the web the default value of stimer is true and the timer at that point is no running until the start button is pressed 
         if (stime == true) {
           //this line is just the same to what i have just explained in line 31
           stime = false;
@@ -37,7 +37,7 @@
         }
       }
       function stop() {
-        //meaning this is the same expalantion though we have used true so that it can stop//we declared stime as true yes thats correct. lemme explain tcycle
+        //meaning this is the same expalantion though we have used true so that it can stop
         if (stime == false) {
           stime = true;
         }
@@ -49,48 +49,42 @@
         ms = 0;
         hr = 0;
       }
-      // function stimer(){
-      //   if(stime == true){
-      //     stime = false;
-      //     tcycle();
-      //   }//hii ni ya nini? tulitumia start() okay
-      // hii ni ya ku start ama tulitumia function name gani kwa html
 
       function tcycle() {
         if (stime == false) {
-          // this condition will be executed when the time is running.owh because the start is false ::exactly
-          s = parseInt(s); //ParseInt converts string to int so that we can us it in checking the condition and arithmetic calculation of time  //okay
+          // this condition will be executed when the time is running because the start is false
+          s = parseInt(s); //ParseInt converts string to int so that we can us it in checking the condition and arithmetic calculation of time
           ms = parseInt(ms);
           hr = parseInt(hr);
 
-          s = s + 1; // initially s was "0" eachtime tcycle runs it add "1" to s i'll show you the code that makes tcycle  to run like a loop in a short while//nice
+          s = s + 1; // initially s was "0" eachtime tcycle runs it add "1" to s i'll show you the code that makes tcycle  to run like a loop in a short while
           if (s == 60) {
-            // this 1st condition is just to change s to min . it checks is s is equal to 60 then adds 1 to ms and resets s to "0"//so this one is for converting to ms yes it works that way //okay
+            // this 1st condition is just to change s to min . it checks is s is equal to 60 then adds 1 to ms and resets s to "0"
             ms = ms + 1;
             s = 0;
           }
-          // iko na shida kama ile ingine ati its not defined i dunno why (^_^)
+          
           if (ms == 60) {
-            // same case to this one it almost work as the s conditon but this on now changes ms to hrs //ooh though im wondering why s=0 being declared inside the if statement and like the first one s-s+1 is not inside the if s is the main var that we use in finding ms and hrs whenever s reaches 60 it adds 1 to ms and starts from 0 again but the ms will still hold the value added//oooh okay .is it clear now yes it is so inshort that s+1 is to enble the s to reach 60 so that ms can have its value yes thats correct!//okay next line
+            // same case to this one it almost work as the s conditon but this on now changes ms to hrs 
             hr = hr + 1;
             ms = 0;
             s = 0;
           }
           if (s < 10 || s == 0) {
             // the display of a stopwatch should be 00:00:00
-            s = "0" + s; // now this if statment makes sure the swatch display is correct. it checks if s is less than 10 or equals to 0 thats between 0-9 is so it prints a string "0" and the s value that is "0" + s this means it will display  0"the s value"//ooh so its zero and the s value by the start function yeah the s value in tcycle//oowh yeahhh you okay with is line?yes okay lets go to the next line
+            s = "0" + s; // now this if statment makes sure the swatch display is correct. it checks if s is less than 10 or equals to 0 thats between 0-9 is so it prints a string "0" and the s value that is "0" + s this means it will display  0"the s value"
           }
           if (ms < 10 || ms == 0) {
-            //this is the same but difference is its for ms or? yeah its just same as the s one but it affects the ms display//okay you've understood this one right?yes okay next line we almost done.
+            
             ms = "0" + ms;
           }
           if (hr < 10 || hr == 0) {
-            // this is but the same. it only difference is that it affects the hr display . is that okay yeah// onkaey next.
+            // this is but the same. it only difference is that it affects the hr display .
             hr = "0" + hr;
           }
-          timer.innerHTML = hr + ":" + ms + ":" + s; //this iss the output now //how it will be displayed yes. this will affect and change the value of const timer.// is this okay absolutely lol okay lets proceed
-          setTimeout("tcycle()", 1000); // this acts like a loop now  setTimeout calls now the tcycle its value 1000 is always in millisecond it give it an interval of 1000 milisecond which is equivalent to 1 second .. //so if we input a higher value the timer will run faster.// not really low value means the time will run faster .. it waits for 1000 milisecond to execute .. now if we have 2000 milisecond it will wait for a long period before it execute.. //owh thanks for the correction issokay (^^) //hope umeelewa the js code//yeah sahi niko na idea of whats happening // am so glad to help . we should be doing this often//definitely si we can jump to next project ama // sahi(^^)//eeh ama you are tired for now😂 am okay we can do it 😉//okay ni vile sijui kueka emoji press the window key and fullstop(.)👌😜🙌 si we save this to github lol//yes but how😒 mine is connected to my github nasave tu inaenda huko but i dont remember how i did its//let me try thookayugh how do you save this file // ukifinya tu ctrl + s itasave kwa database yake online//okay😁 lemme add to my git alafu i wont remove any comments lol//😂😂//watu watakushangaa //codes ndio inamatter lol//sawasawa sir
-        } //eeh
+          timer.innerHTML = hr + ":" + ms + ":" + s; //this is the output now. this will affect and change the value of const timer
+          setTimeout("tcycle()", 1000); // this acts like a loop now  setTimeout calls now the tcycle its value 1000 is always in millisecond it give it an interval of 1000 milisecond which is equivalent to 1 second 
+        } 
       }
     </script>
   </body>
